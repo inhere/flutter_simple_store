@@ -21,7 +21,7 @@ final class SimpleStoreImpl implements SimpleStore {
   String? key(int index) => window.localStorage.key(index);
 
   @override
-  T? getItem<T>(String key) {
+  T? get<T>(String key) {
     var str = window.localStorage.getItem(key);
 
     if (str != null) {
@@ -36,7 +36,7 @@ final class SimpleStoreImpl implements SimpleStore {
   }
 
   @override
-  void setItem(String key, Object value) {
+  void set(String key, Object value) {
     // check value is basic type
     if (value is String || value is num || value is bool) {
       window.localStorage.setItem(key, value.toString());
@@ -47,7 +47,10 @@ final class SimpleStoreImpl implements SimpleStore {
   }
 
   @override
-  void removeItem(String key) => window.localStorage.removeItem(key);
+  bool exists(String key) => window.localStorage.getItem(key) != null;
+
+  @override
+  void remove(String key) => window.localStorage.removeItem(key);
 }
 
 extension StringExtension on String {

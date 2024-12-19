@@ -41,7 +41,7 @@ build/
 .ios/
 .flutter-plugins
 .flutter-plugins-dependencies
-project.loc.yaml
+test/test.json
 
 # Symbolication related
 app.*.symbols
