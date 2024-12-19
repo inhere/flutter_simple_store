@@ -7,10 +7,10 @@
 ///   WidgetsFlutterBinding.ensureInitialized();
 ///
 ///   await initSimpleStore('path/to/dir/store.json');
-///   simpleStore.setItem('key', 'value');
+///   simpleStore.set('key', 'value');
 ///
 ///   // Will print "value" after app reload as well.
-///   print(simpleStore.getItem('key'));
+///   print(simpleStore.get('key'));
 /// }
 /// ```
 abstract interface class SimpleStore {

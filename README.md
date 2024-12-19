@@ -25,9 +25,9 @@ void main() async {
   // Initialize the store.
   await initSimpleStore('my-app.json');
 
-  simpleStore.setItem('key', 'value');
+  simpleStore.set('key', 'value');
   // Will print "value" after app reload as well.
-  print(simpleStore.getItem('key'));
+  print(simpleStore.get('key'));
 }
 ```
 

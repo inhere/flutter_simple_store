@@ -9,7 +9,7 @@ late SimpleStore _simpleStore;
 /// Initialize the [SimpleStore].
 /// - (`!web`) file will save to user app-data directory.
 ///
-/// eg: `await simpleStore.init('app.json')`
+/// eg: `await initSimpleStore('app.json')`
 Future<void> initSimpleStore(String storeFilename) async {
   if (_initialized) return;
   _simpleStore = await init(storeFilename);
